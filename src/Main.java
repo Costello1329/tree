@@ -45,6 +45,9 @@ public class Main {
                 paths.add(arg);
         }
 
+        if (paths.isEmpty())
+            paths.add(".");
+
         Tree.tree(paths.stream().map(Path::of).toArray(Path[]::new), maxDepth, settings.stream().toList());
     }
 }
